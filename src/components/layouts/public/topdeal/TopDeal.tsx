@@ -1,9 +1,9 @@
-import React from 'react';
-import { ChevronRight } from 'lucide-react';
-import Link from 'next/link';
-import { getProducts } from '@/services/product.service';
-import { IProduct } from '@/types/products.type';
-import { ProductCard1 } from '@/components/product-card1';
+import React from "react";
+import { ChevronRight } from "lucide-react";
+import Link from "next/link";
+import { getProducts } from "@/services/product.service";
+import { IProduct } from "@/types/products.type";
+import { ProductCard1 } from "@/components/product-card1";
 
 const TopDeal = async () => {
   const data = await getProducts({
@@ -17,7 +17,7 @@ const TopDeal = async () => {
     <div className="w-full  ">
       <div className="container mx-auto sm:px-4 md:px-5 lg:px-0">
         {/* Header Section */}
-        <div className="mb-5 flex items-center justify-between gap-3 sm:mb-6 md:mb-8">
+        <div className="my-5 flex items-center justify-between gap-3 sm:mb-6 md:mb-8">
           <h2 className="text-lg font-bold text-gray-800 sm:text-xl md:text-2xl lg:text-3xl">
             Top Deals
           </h2>
@@ -34,7 +34,7 @@ const TopDeal = async () => {
 
         {/* Products Grid */}
         <div className="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-3 lg:gap-4 xl:grid-cols-5">
-          {isProducts.slice(0, 5).map(product => {
+          {isProducts.slice(0, 5).map((product) => {
             return (
               <ProductCard1
                 key={product.id}
